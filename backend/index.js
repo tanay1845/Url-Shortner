@@ -20,6 +20,8 @@ connectDB()
 
 app.use("/api/shorturl",urlRoutes)
 
+const _dirname = path.resolve()
+
 
 // app.get("/all/shorturl",authMiddleware,getUserUrls)
 
