@@ -14,7 +14,7 @@ const HomePage = () => {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      const response = await axios.post("http://localhost:3000/api/shorturl/url", {
+      const response = await axios.post("https://url-shortner-5s6c.onrender.com/api/shorturl/url", {
         url
       }, {
         withCredentials: true
@@ -62,12 +62,12 @@ const HomePage = () => {
     {shortId && (
       <div className="bg-indigo-300 px-4 py-3 rounded-md text-center break-all border-l-4 border-indigo-500 shadow-sm">
         <a
-          href={`http://localhost:3000/${shortId.newUrl.shortId}`}
+          href={`https://url-shortner-5s6c.onrender.com/${shortId.newUrl.shortId}`}
           target="_blank"
           rel="noopener noreferrer"
           className="text-black font-medium underline"
         >
-          http://localhost:3000/{shortId.newUrl.shortId}
+          https://url-shortner-5s6c.onrender.com/{shortId.newUrl.shortId}
         </a>
         {
           shortId.qrCodeImg && (

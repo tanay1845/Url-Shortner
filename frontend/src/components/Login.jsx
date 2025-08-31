@@ -25,7 +25,7 @@ const Login = () => {
         return setError("All fields are required.");
       }
       setError("");
-      const res = await axios.post("http://localhost:3000/api/shorturl/login",
+      const res = await axios.post("https://url-shortner-5s6c.onrender.com/api/shorturl/login",
         {
           email:form.email, 
           password:form.password

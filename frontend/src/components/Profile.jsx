@@ -14,7 +14,7 @@ const Profile = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:3000/api/shorturl/logout", {
+      await axios.get("https://url-shortner-5s6c.onrender.com/api/shorturl/logout", {
         withCredentials: true,
       });
       setUser(null);
@@ -31,7 +31,7 @@ const Profile = () => {
       }
 
       await axios.put(
-        "http://localhost:3000/shorturl/edituser",
+        "https://url-shortner-5s6c.onrender.com/shorturl/edituser",
         { name },
         { withCredentials: true }
       );
@@ -46,7 +46,7 @@ const Profile = () => {
 
   const fetchProfile = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/user/profile", {
+      const res = await axios.get("https://url-shortner-5s6c.onrender.com/user/profile", {
         withCredentials: true,
       });
       setUser(res.data.user);
