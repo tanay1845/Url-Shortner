@@ -36,7 +36,7 @@ const generateShortUrl = async (req, res) => {
 
         const shortId = nanoid(8);
 
-        const qrUrl = `http://localhost:3000/${shortId}`;
+        const qrUrl = `https://url-shortner-5s6c.onrender.com/${shortId}`;
 
         const qrCodeImg = await QRCode.toDataURL(qrUrl);
         
